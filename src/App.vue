@@ -85,7 +85,7 @@
   }
 
   .hidden {
-    display: none;
+    opacity: 0;
   }
 
   @include breakpoint {
