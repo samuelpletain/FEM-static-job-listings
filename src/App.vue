@@ -54,6 +54,7 @@
 </script>
 
 <template>
+  <h1 class="hidden">Static Job Listings</h1>
   <div class="wrapper">
     <Filter :tags="filter" @clear="clearFilters" @removable="removeTag"/>
     <Card v-for="item in tags" :id="item.id" :company="item.company" :logo="item.logo" :new="item.new" :featured="item.featured" :position="item.position" :role="item.role" :level="item.level" :postedAt="item.postedAt" :contract="item.contract" :location="item.location" :languages="item.languages" :tools="item.tools" @tag-clicked="addTag"/>
@@ -81,6 +82,10 @@
       transform: translateY(-1.9rem);
       margin-bottom: -1rem;
     }
+  }
+
+  .hidden {
+    display: none;
   }
 
   @include breakpoint {
