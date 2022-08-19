@@ -69,7 +69,7 @@
     &::before {
       content: '';
       display: block;
-      background: $primary url("./images/bg-header-mobile.svg") no-repeat;
+      background: $primary url("/images/bg-header-mobile.svg") no-repeat;
       width: 100%;
       height: 156px;
       position: absolute;
