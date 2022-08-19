@@ -69,7 +69,8 @@
     &::before {
       content: '';
       display: block;
-      background: $primary url("/images/bg-header-mobile.svg") no-repeat;
+      background: $primary url("/images/bg-header-mobile.svg") center no-repeat;
+      background-size: cover;
       width: 100%;
       height: 156px;
       position: absolute;
@@ -87,7 +88,7 @@
       max-width: 1100px;
       margin: auto;
       &::before {
-        background-image: url("./images/bg-header-desktop.svg");
+        background-image: url("/images/bg-header-desktop.svg");
       }
     }
   }
