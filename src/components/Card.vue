@@ -36,7 +36,11 @@
       <Tag class="round_tag_container__tag" v-if="props.new" content="NEW!" :rounded="true"/>
       <Tag class="round_tag_container__tag" v-if="props.featured" content="FEATURED" :rounded="true" color="black"/>
     </div>
-    <a class="card__position">{{ props.position }}</a>
+    <h2 class="card__position">
+      <a href="#">
+        {{ props.position }}
+      </a>
+    </h2>
     <p class="card__metadata">{{ props.postedAt }} - {{ props.contract }} - {{ props.location }}</p>
     <div class="card__tag_container tag_container">
       <Tag class="tag_container__tag" v-for="tag in tags" :content="tag" @click="$emit('tagClicked', tag)"/>
@@ -75,7 +79,8 @@
       color: $primary;
       display: inline-block;
     }
-    &__position {
+    &__position a {
+      text-decoration: none;
       color: $neutral-700;
       display: block;
       width: fit-content;

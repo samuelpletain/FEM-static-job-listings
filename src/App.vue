@@ -54,14 +54,14 @@
 </script>
 
 <template>
-  <main class="main">
+  <div class="wrapper">
     <Filter :tags="filter" @clear="clearFilters" @removable="removeTag"/>
     <Card v-for="item in tags" :id="item.id" :company="item.company" :logo="item.logo" :new="item.new" :featured="item.featured" :position="item.position" :role="item.role" :level="item.level" :postedAt="item.postedAt" :contract="item.contract" :location="item.location" :languages="item.languages" :tools="item.tools" @tag-clicked="addTag"/>
-  </main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-  .main {
+  .wrapper {
     display: grid;
     gap: 2.5rem;
     padding: 156px 1.5rem 1.5rem;
@@ -84,7 +84,7 @@
   }
 
   @include breakpoint {
-    .main {
+    .wrapper {
       max-width: 1100px;
       margin: auto;
       &::before {
